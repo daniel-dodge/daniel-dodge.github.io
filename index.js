@@ -1,7 +1,12 @@
 const about = document.querySelector("#about")
+const project = document.querySelector("#projects")
+const div = document.querySelector(".content-holder")
 
-const test = () => {
-    alert("button")
+const adjustAbout = () => {
+    div.setAttribute('id',"about-div")
 }
-
-about.addEventListener("click",test)
+const adjustProject = () => {
+    div.setAttribute('id',"project-div")
+}
+project.addEventListener("click",adjustProject)
+about.addEventListener("click",adjustAbout)
