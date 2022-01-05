@@ -32,8 +32,16 @@
 }
 
 body {
-    background-color: #15222e;
+    background:      
+    radial-gradient(farthest-side at top left,
+    rgba(18, 56, 61, 0.75),transparent),
+    
+    radial-gradient(farthest-side at bottom left,
+    rgba(27, 53, 110, 0.75),transparent),
+    radial-gradient(farthest-corner at bottom right,
+    rgba(91, 40, 143, 0.75),transparent) #003b44;
     /* margin:0px 18vw; */
+    /* #15222e */
     display:flex;
     flex-direction:column;
     justify-content: space-between;
@@ -63,26 +71,41 @@ body {
     text-decoration:none;
     border:none;
     background:none;
-    color:white;
+    color:#b2d1cf;
     font-size:1vw;
     cursor: pointer;
+    transition:0.25s;
+    margin-left:1vw;
 }
 .content-holder {
-    width:10vw;
-    height:15vh;
+    position:relative;
+    width:20vw;
+    height:25vh;
     border: 1px solid black;
-    background-color:white;
+    background-color: rgba(18, 56, 61, 0.75);
     margin-top:15vh;
-    transition:0.75s;
-    margin-bottom:45vh;
-    /* display:none */
+    transition:0.25s;
+    margin-bottom:35vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
 }
 #project-div{
     width:35vh;
 }
 #about-div{
     width:40vw;
-    height:55vh
+    height:55vh;
+
+}
+#skills-div{
+    width:35vw;
+    height:25vh;
+}
+#contact-div{
+    width:25vw;
+    height:15vh
 }
 footer {
     position:absolute;
@@ -92,4 +115,62 @@ footer {
     padding: 0 2.5vw;
     display:flex;
     justify-content:center;
+}
+.nav-btn:hover{
+    margin-bottom:0.2vh;
+    font-size:1.5em;
+    color:white;
+}
+.greeting{
+position:absolute;
+display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+width:100%;
+height:100%;
+transition:0.25s
+}
+#hidden{
+    /* display:none; */
+    opacity:0;
+}
+#reveal{
+    /* display:block; */
+    /* visibility:visible; */
+    opacity:1;
+    transition:2s;
+}
+
+.about-section{
+    position:absolute;
+
+    font-size:100px;
+    opacity:0;
+    transition:1s;
+
+}
+.project-section{
+    position:absolute;
+
+    font-size:100px;
+    opacity:0;
+    transition:1s;
+
+}
+.skills-section{
+    position:absolute;
+
+    font-size:100px;
+    opacity:0;
+    transition:1s;
+
+}
+.contact-section{
+    position:absolute;
+
+    font-size:100px;
+    opacity:0;
+    transition:1s;
+
 }
