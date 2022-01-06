@@ -8,8 +8,7 @@ const aboutSec = document.querySelector(".about-section")
 const projectSec = document.querySelector(".project-section")
 const skillsSec = document.querySelector(".skills-section")
 const contactSec = document.querySelector(".contact-section")
-// let visible = Object.keys({greetingSec})[0]
-// console.log(visible)
+
 const adjustAbout = () => {
     let visible = document.getElementById("reveal")
     visible.setAttribute('id','hidden')
@@ -35,6 +34,7 @@ const adjustContact = () => {
     div.setAttribute('id',"contact-div")
     contactSec.setAttribute('id','reveal')
 }
+
 project.addEventListener("click",adjustProject)
 about.addEventListener("click",adjustAbout)
 skills.addEventListener("click",adjustSkills)
